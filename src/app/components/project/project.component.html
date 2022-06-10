@@ -1,0 +1,30 @@
+<article
+  class="project"
+  [ngStyle]="{
+    'background-image':
+      'linear-gradient(rgba(0, 0, 0, .3), rgba(0, 0, 0, .3)), url(' +
+      project.urlImg +
+      ')'
+  }"
+>
+  <aside class="project-content">
+    <h3 class="project-title">{{ project.title }}</h3>
+    <p
+      *ngFor="let paragraph of project.description.split('/n')"
+      class="project-body"
+    >
+      {{ paragraph }}
+    </p>
+    <div class="project-links">
+      <a href={{project.urlDemo}} target="_blank" rel="noopener">
+        <icon-demo></icon-demo>
+      </a>
+      <a href={{project.urlGit}} target="_blank" rel="noopener">
+        <icon-git-hub></icon-git-hub>
+      </a>
+    </div>
+    <div class="project-techs">
+      <small *ngFor="let tech of project.techs.split(',')">{{ tech.trim() }}</small>
+    </div>
+  </aside>
+</article>

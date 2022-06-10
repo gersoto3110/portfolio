@@ -1,0 +1,28 @@
+.projects {
+  padding-bottom: var(--navbar-height);
+}
+
+.projects-title {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-content: center;
+  justify-items: center;
+  row-gap: .2rem;
+  color: var(--first-color);
+  padding-bottom: 1rem;
+}
+
+.projects-title::after {
+  content: "";
+  background: var(--first-color);
+  height: 3px;
+  width: 20rem;
+}
+
+.projects-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 3rem;
+  align-content: center;
+  margin-top: 1.5rem;
+}

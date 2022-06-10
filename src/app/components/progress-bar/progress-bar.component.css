@@ -1,0 +1,26 @@
+progress {
+  --color: var(--first-color-light);
+  --dark-color: var(--second-color);
+  width: 100%;
+  height: 1rem;
+  background-color: var(--color);
+}
+
+progress::-webkit-progress-bar {
+  background-color: var(--color);
+}
+
+progress::-webkit-progress-value {
+  background-color: var(--dark-color);
+}
+
+progress::-moz-progress-bar {
+  background-color: var(--dark-color);
+}
+
+.progress > p {
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.85rem;
+}

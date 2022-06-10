@@ -1,0 +1,27 @@
+<section id="profile" class="profile" *ngIf="profile && skills">
+  <article class="about">
+    <aside class="data">
+      <h1 class="title">{{ profile.name }} {{ profile.lastName }}</h1>
+      <h5 class="title">{{ profile.occupation }}</h5>
+    </aside>
+    <p *ngFor="let paragraph of profile.about.split('/n')">{{ paragraph }}</p>
+  </article>
+  <article class="skills">
+    <h2 class="title">Mis habilidades</h2>
+    <div class="buttons">
+      <button
+        *ngFor="let category of categories"
+        type="button"
+        [ngClass]="category.value === categorySelected ? 'btn active' : 'btn'"
+        (click)="onSelected(category.value)"
+      >
+        {{ category.name }}
+      </button>
+    </div>
+    <app-progress-bar
+      *ngFor="let skill of skills | filter: 'category':categorySelected"
+      [percentage]="skill.percentage.toString()"
+      [name]="skill.name"
+    ></app-progress-bar>
+  </article>
+</section>

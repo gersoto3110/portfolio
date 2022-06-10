@@ -1,0 +1,13 @@
+<section id="home" class="home" *ngIf="profile">
+  <app-hero-image
+    [bgImageUrl]="profile.urlImgBanner"
+    [bgAttachment]="'fixed'"
+    [opacityColor]="'rgba(0, 0, 0, .6)'"
+  >
+    <div class="wrapper">
+      <span class="subtitle">Hola, soy</span>
+      <h1 class="big-title">{{ profile.name }} {{ profile.lastName }}.</h1>
+      <h2 class="big-title">Bienvenid@ a mi página web.</h2>
+    </div>
+  </app-hero-image>
+</section>

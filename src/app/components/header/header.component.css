@@ -1,0 +1,32 @@
+.header {
+  position: fixed;
+  z-index: 100;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: var(--navbar-height);
+  padding: 0 3rem;
+  background-color: var(--second-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header .logo {
+  color: var(--white-color);
+}
+
+.header .menu {
+  display: flex;
+  column-gap: 1rem;
+}
+
+.header .menu .link {
+  color: var(--white-color);
+  font-weight: bold;
+}
+
+.header .menu .cv {
+  color: var(--first-color-light);
+  font-weight: bold;
+}

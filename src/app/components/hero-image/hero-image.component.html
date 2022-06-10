@@ -1,0 +1,8 @@
+<article
+  class="hero-image"
+  [ngStyle]="{ 'background-image': 'url(' + bgImageUrl + ')', 'background-attachment': bgAttachment }"
+>
+  <aside class="hero-image-opacity" [ngStyle]="{'background-color': opacityColor}">
+    <ng-content></ng-content>
+  </aside>
+</article>
