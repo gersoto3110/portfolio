@@ -1,0 +1,28 @@
+<div class="backdrop" *ngIf="openModalLogin" (click)="switchModalLogin()">
+  <div class="modal-login" (click)="onModelContainerClick($event)">
+    <h2>Iniciar Sesión</h2>
+    <form
+      class="login-form"
+      [formGroup]="formUser"
+      (ngSubmit)="onSubmit($event)"
+    >
+      <input
+        class="email"
+        type="email"
+        name="email"
+        placeholder="Correo electrónico"
+        formControlName="email"
+        required
+      />
+      <input
+        class="password"
+        type="password"
+        name="password"
+        placeholder="Contraseña"
+        formControlName="password"
+        required
+      />
+      <button class="submit" type="submit">Ingresar</button>
+    </form>
+  </div>
+</div>

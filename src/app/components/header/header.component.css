@@ -26,7 +26,6 @@
   font-weight: bold;
 }
 
-.header .menu .cv {
+.header .menu .extra {
   color: var(--first-color-light);
-  font-weight: bold;
 }

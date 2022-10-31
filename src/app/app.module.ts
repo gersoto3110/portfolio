@@ -1,5 +1,6 @@
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { NgModule } from '@angular/core';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 
@@ -10,7 +11,7 @@ import { SpinnerComponent } from './components/spinner/spinner.component';
 import { LoaderInterceptor } from './interceptor/loader.interceptor';
 import { ProfileComponent } from './components/sections/profile/profile.component';
 import { HeroImageComponent } from './components/hero-image/hero-image.component';
-import { PortfolioComponent } from './components/portfolio/portfolio.component';
+import { PortfolioComponent } from './pages/portfolio/portfolio.component';
 import { ProgressBarComponent } from './components/progress-bar/progress-bar.component';
 import { FilterPipe } from './pipe/filter.pipe';
 import { ProjectsComponent } from './components/sections/projects/projects.component';
@@ -19,6 +20,8 @@ import { IconDemoComponent } from './components/icons/icon-demo.component';
 import { IconGitHubComponent } from './components/icons/icon-git-hub.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './components/header/header.component';
+import { ModalLoginComponent } from './components/modal-login/modal-login.component';
+import { ModalEditComponent } from './components/modal-edit/modal-edit.component';
 
 @NgModule({
   declarations: [
@@ -37,8 +40,16 @@ import { HeaderComponent } from './components/header/header.component';
     IconGitHubComponent,
     FooterComponent,
     HeaderComponent,
+    ModalLoginComponent,
+    ModalEditComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule,
+  ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: LoaderInterceptor, multi: true },
   ],

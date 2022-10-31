@@ -1,0 +1,72 @@
+.modal-login {
+  --color: rgb(3, 165, 206);
+  width: 400px;
+  height: 350px;
+  border: 2px solid var(--color);
+  border-radius: 1rem;
+  box-shadow: 0 0 1rem var(--color);
+  background-color: var(--white-color);
+
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+
+  padding: 1rem 0;
+}
+
+.modal-login h2 {
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  color: #555;
+}
+
+.modal-login input,
+.modal-login button {
+  width: 90%;
+  height: 2.5rem;
+  outline: var(--color);
+  border: 1px solid var(--color);
+  border-radius: 0.3rem;
+}
+
+.modal-login input {
+  padding-left: 0.5rem;
+}
+
+.modal-login button {
+  background: var(--color);
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.login-form {
+  height: 70%;
+  width: 80%;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-areas:
+    "email email"
+    "password password"
+    "submit submit";
+
+  align-items: center;
+  justify-items: center;
+}
+
+.login-form .email {
+  grid-area: email;
+}
+
+.login-form .password {
+  grid-area: password;
+}
+
+.login-form .submit {
+  grid-area: submit;
+}

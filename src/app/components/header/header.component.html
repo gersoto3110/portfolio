@@ -4,6 +4,25 @@
     <a class="link" routerLink="/" fragment="home">Inicio</a>
     <a class="link" routerLink="/" fragment="profile">Perfil</a>
     <a class="link" routerLink="/" fragment="projects">Proyectos</a>
-    <a class="cv" href="/assets/cv.pdf" target="_blank" rel="noopener">CV</a>
+    <a class="link extra" href="/assets/cv.pdf" target="_blank" rel="noopener"
+      >CV</a
+    >
+    <button class="link extra" *ngIf="!isLoggin" (click)="switchModalLogin()">
+      Entrar
+    </button>
+    <button class="link extra" *ngIf="isLoggin" (click)="switchModalEdit()">
+      Editar
+    </button>
+    <button class="link extra" *ngIf="isLoggin" (click)="logout()">
+      Salir
+    </button>
   </nav>
 </header>
+<app-modal-login
+  [switchModalLogin]="switchModalLogin"
+  [openModalLogin]="openModalLogin"
+></app-modal-login>
+<app-modal-edit
+  [switchModalEdit]="switchModalEdit"
+  [openModalEdit]="openModalEdit"
+></app-modal-edit>

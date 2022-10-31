@@ -8,14 +8,15 @@ export const dataUrls = {
   profile: '/profile',
   project: '/project',
   skill: '/skill',
-  user: '/user',
+  // user: '/user',
 };
 
 @Injectable({
   providedIn: 'root',
 })
 export class ApiService {
-  private readonly apiUrl: string = 'https://limitless-castle-20772.herokuapp.com/api/';
+  private readonly apiUrl: string =
+    'https://limitless-castle-20772.herokuapp.com/api/';
 
   constructor(private readonly http: HttpClient) {}
 
@@ -39,8 +40,8 @@ export class ApiService {
     return this.http.delete<any>(url);
   }
 
-  getUserByEmail(email: string): Observable<any> {
-    const url = `${this.apiUrl}${dataUrls.user}/find-email/${email}`;
-    return this.http.get(url);
-  }
+  // getUserByEmail(email: string): Observable<any> {
+  //   const url = `${this.apiUrl}${dataUrls.user}/find-email/${email}`;
+  //   return this.http.get(url);
+  // }
 }

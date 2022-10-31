@@ -33,7 +33,8 @@ body {
   display: grid;
 }
 
-main, footer {
+main,
+footer {
   margin: auto;
   max-width: var(--max-width);
 }
@@ -91,6 +92,19 @@ button {
   font-family: inherit;
   padding: 0;
   cursor: pointer;
+}
+
+.backdrop {
+  width: 100%;
+  min-height: 100vh;
+  background: rgba(0, 0, 0, 0.75);
+  z-index: 100;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 @media screen and (-ms-high-contrast: active) {

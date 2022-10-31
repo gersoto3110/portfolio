@@ -1,0 +1,42 @@
+<div class="backdrop" *ngIf="openModalEdit" (click)="switchModalEdit()">
+  <div class="modal-edit" (click)="onModelContainerClick($event)">
+    <h2>Editar Perfil</h2>
+    <form
+      class="edit-form"
+      [formGroup]="formProfile"
+      (ngSubmit)="onSubmit($event)"
+    >
+      <input
+        type="name"
+        name="name"
+        placeholder="Nombre"
+        formControlName="name"
+      />
+      <input
+        type="lastName"
+        name="lastName"
+        placeholder="Apellido"
+        formControlName="lastName"
+      />
+      <input
+        type="occupation"
+        name="occupation"
+        placeholder="Ocupación"
+        formControlName="occupation"
+      />
+      <input
+        type="urlImgBanner"
+        name="urlImgBanner"
+        placeholder="Url Img Banner"
+        formControlName="urlImgBanner"
+      />
+      <textarea
+        type="about"
+        name="about"
+        placeholder="Sobre mí"
+        formControlName="about"
+      ></textarea>
+      <button class="submit" type="submit">Actualizar Perfil</button>
+    </form>
+  </div>
+</div>
